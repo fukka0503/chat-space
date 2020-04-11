@@ -18,7 +18,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name | stirng |:name, null: false|
+|name| stirng |null: false|
 
 ## Association
 - has_many :users,through::group_users
