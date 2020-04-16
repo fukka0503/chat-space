@@ -2,12 +2,12 @@
   .side-bar_user
     .side-bar_user_top-items
       .side-bar_user_top-items-name
-        masa
+        = current_user.name
       .side-bar_user_top-items-icons
         = link_to "#", class: "contents__btn contents__btn--edit" do
           <i class='far fa-edit'></i>
-        = link_to "#", class: "contents__btn contents__btn--cog" do
-          <i class="fas fa-cog"></i>
+        = link_to edit_user_path(current_user) do
+          = icon('fas', 'cog', class: 'icon')
   .side-bar-group
     .side-bar-group-one
       techcamp
