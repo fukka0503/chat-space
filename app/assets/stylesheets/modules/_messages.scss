@@ -38,11 +38,17 @@
     background-color: #2f3e51;
     color: #ffffff;
     padding-left: 20px;
+    color: white;
+    a {
+      color: white;
+      text-decoration: none;
+    }
     &-one {
       font-size: 15px;
       font-weight: bold;
       padding-top: 20px;
       padding-bottom: 5px;
+      color: white;
       &-message {
         font-size: 11px;
         padding-bottom: 40px;
@@ -58,26 +64,26 @@
         padding-bottom: 40px;
       }
     }
-    &-three {
-      font-size: 15px;
-      font-weight: bold;
-      padding-top: 20px;
-      padding-bottom: 5px;
-      &-message {
-        font-size: 11px;
-        padding-bottom: 40px;
-      }
-    }
-    &-four {
-      font-size: 15px;
-      font-weight: bold;
-      padding-top: 20px;
-      padding-bottom: 5px;
-      &-message {
-        font-size: 11px;
-        padding-bottom: 40px;
-      }
-    }
+    // &-three {
+    //   font-size: 15px;
+    //   font-weight: bold;
+    //   padding-top: 20px;
+    //   padding-bottom: 5px;
+    //   &-message {
+    //     font-size: 11px;
+    //     padding-bottom: 40px;
+    //   }
+    // }
+    // &-four {
+    //   font-size: 15px;
+    //   font-weight: bold;
+    //   padding-top: 20px;
+    //   padding-bottom: 5px;
+    //   &-message {
+    //     font-size: 11px;
+    //     padding-bottom: 40px;
+    //   }
+    // }
   }
 }
 
@@ -126,6 +132,7 @@
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding-left: 40px;
+    overflow: scroll;
   .main-chat-message {
     &-box {
       display: flex;
@@ -193,52 +200,52 @@
       
     
   
-  &-message-form {
+  .form {
     height: 90px;
     width: 100%;
     background-color: #d2d2d2;
-    padding-top: 10px;
-    padding-right: 10px;
     display: flex;
-    .new_message {
+    position: fixed;
+    bottom: 0;
+    padding: 20px 40px;
+    .new_message{
       display: flex;
-      height: 100%;
+    }
+    .top {
+      display: flex;
       width: 100%;
-      position: relative;
-        .input-box__text {
-          align-items: center;
-          line-height: 90px;
-          background-color: white;
-          height: 60%;
-          width: 90%;
-          padding: 0 40px 0 10px;
-          margin-left: 37px;
-          margin-top: 10px;
-        }
-        .input-box__image {
+      height: 100%;
+     
+      .form__message {
+        height: 50px;
+        width: 945px;
+        position: relative;
+      }
+      .form__mask {
+          height: 50px;
           position: absolute;
-          top: 21px;
-          right: 80px;
-          .fa.fa-image {
+          left: 942px;
+          bottom: 5px;
+        
+        .form__mask__image{
+          .icon {
             font-size: 22px;
           }
-          .input-box__image__file {
+          .hidden {
             display: none;
           }
         }
       }
-
-    .submit-btn {
+    
+    }
+    .submit {
       width: 100px;
-      height: 48px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 15px;
       background-color: #38aef0;
       color: white;
-      font-size: 16px;
-      text-align: center;
-      margin-right: 30px;
-      margin-top: 10px;
-      padding: 10px;
+      cursor: pointer;
     }
-    
   }
 }

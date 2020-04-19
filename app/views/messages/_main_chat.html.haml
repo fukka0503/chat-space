@@ -2,41 +2,21 @@
   .main-chat-top
     .main-chat-top-left
       .main-chat-top-left-name
-        test
+        = @group.name
         .main-chat-top-left-name-li
-          Member:masa
+          = current_user.name
     .main-chat-top-right
       .main-chat-top-right-edit
-        = link_to "#", class: "Edit" do
+        = link_to edit_group_path(@group), class: "Edit" do
           Edit
   .main-chat-messages
-    .main-chat-message
-      .main-chat-message-box
-        .main-chat-message-box-one
-          masa
-        .main-chat-message-box-li
-          2019/11/20(Wed) 17:43:01
-      .main-chat-messasge-talk
-        おはよう
-      .main-chat-message-box
-        .main-chat-message-box-two
-          masa
-        .main-chat-message-box-li
-          2019/11/20(Wed) 17:43:01
-      .main-chat-messasge-talk
-        おはよう
-
-      .main-chat-message-box
-        .main-chat-message-box-three
-          masa
-        .main-chat-message-box-li
-          2019/11/20(Wed) 17:43:01
-      .main-chat-messasge-talk
-        おはよう
-  .main-chat-message-form
-    %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/26215/messages", :enctype => "multipart/form-data", :method => "post"}
-      %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-      %label.input-box__image{:for => "message_image"}
-        %i.fa.fa-image
-        %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
-    %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+    = render @messages
+  .form
+    = form_for [@group, @message] do |f|
+      .top
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'submit'

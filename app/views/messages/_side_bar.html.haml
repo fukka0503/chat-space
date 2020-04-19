@@ -10,21 +10,11 @@
           = icon('fas', 'cog', class: 'icon')
   .side-bar-group
     - current_user.groups.each do |group|
-      = link_to '#' do
+      = link_to group_messages_path(group) do
         = group.name
-    .side-bar-group-one
-      .side-bar-group-one-message
-        まだメッセージがありません
-    .side-bar-group-two
-      .side-bar-group-two-message
-        まだメッセージがありません
-    -# .side-bar-group-three
-    -#   = link_to '#' do
-    -#     = group-three.name
-    -#   .side-bar-group-three-message
-    -#     まだメッセージがありません
-    -# .side-bar-group-four
-    -#   = link_to '#' do
-    -#     = group-four.name
-    -#   .side-bar-group-four-message
-    -#     まだメッセージがありません
+      .side-bar-group-one
+        .side-bar-group-one-message
+          = group.show_last_message
+    -# .side-bar-group-two
+    -#   .side-bar-group-two-message
+    -#     = @group.show_last_message
