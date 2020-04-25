@@ -4,7 +4,8 @@
       .main-chat-top-left-name
         = @group.name
         .main-chat-top-left-name-li
-          = current_user.name
+          - @group.users.each do |user|
+            = user.name
     .main-chat-top-right
       .main-chat-top-right-edit
         = link_to edit_group_path(@group), class: "Edit" do
