@@ -13,6 +13,11 @@
           Edit
   .main-chat-messages
     = render @messages
+    .main-chat-message
+      .main-chat-message-box
+        .main-chat-message-box-one
+        .main-chat-message-box-li
+        .main-chat-message-box-talk
   .form
     = form_for [@group, @message] do |f|
       .top
