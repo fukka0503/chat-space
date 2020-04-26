@@ -116,8 +116,6 @@
     overflow: scroll;
     padding-bottom: 40px;
   .message {
-    // height: 58px;
-    // padding-bottom: 40px;
     .upper-message {
       display: flex;
       padding-top: 35px;
@@ -209,15 +207,15 @@
         .icon {
           font-size: 22px;
           position: absolute;
+          line-height: 50px;
           right: 158px;
-          bottom: 34px;
+          // bottom: 34px;
         }
         .hidden {
           display: none;
         }
       }
       }
-    
     }
     .submit {
       width: 100px;
