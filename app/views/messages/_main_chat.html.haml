@@ -4,6 +4,7 @@
       .main-chat-top-left-name
         = @group.name
         .main-chat-top-left-name-li
+          Member:
           - @group.users.each do |user|
             = user.name
     .main-chat-top-right
