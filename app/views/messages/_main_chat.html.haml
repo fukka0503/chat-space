@@ -13,13 +13,13 @@
           Edit
   .main-chat-messages
     = render @messages
-    .main-chat-message
-      .main-chat-message-box
-        .main-chat-message-box-one
-        .main-chat-message-box-li
-        .main-chat-message-box-talk
-  .form
-    = form_for [@group, @message] do |f|
+    .message
+      .upper-message
+        .upper-message__user-name
+        .upper-message__date
+        .lower-message
+  = form_for [@group, @message] do |f|
+    .form
       .top
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
         .form__mask
@@ -27,4 +27,3 @@
             = icon('fas', 'image', class: 'icon')
             = f.file_field :image, class: 'hidden'
       = f.submit 'Send', class: 'submit'
-      

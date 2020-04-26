@@ -115,20 +115,22 @@
     padding-left: 40px;
     overflow: scroll;
     padding-bottom: 40px;
-  .main-chat-message {
-    &-box {
+  .message {
+    // height: 58px;
+    // padding-bottom: 40px;
+    .upper-message {
       display: flex;
       padding-top: 35px;
-      &-one {
+      .upper-message__user-name {
         color: #333333;
         font-size: 16px;
       }
-      &-li {
+      .upper-message__date {
         color: #999999;
         font-size: 12px;
         padding-left: 10px;
       }
-      &-talk {
+      .lower-message {
         color: #434A54;
         font-size: 14px;
         padding-top: 12px;
@@ -136,19 +138,19 @@
       }
     }
 
-    &-box {
+    .upper-message {
       display: flex;
       padding-top: 35px;
-      &-two {
+      .upper-message__user-name {
         color: #333333;
         font-size: 16px;
       }
-      &-li {
+      .upper-message__date {
         color: #999999;
         font-size: 12px;
         padding-left: 10px;
       }
-      &-talk {
+      .lower-message {
         color: #434A54;
         font-size: 14px;
         padding-top: 12px;
@@ -156,19 +158,19 @@
       }
     }
 
-    &-box {
+    .upper-message {
       display: flex;
       padding-top: 35px;
-      &-three {
+      .upper-message__user-name {
         color: #333333;
         font-size: 16px;
       }
-      &-li {
+      .upper-message__date {
         color: #999999;
         font-size: 12px;
         padding-left: 10px;
       }
-      &-talk {
+      .lower-message {
         color: #434A54;
         font-size: 14px;
         padding-top: 12px;
@@ -187,36 +189,33 @@
     width: 100%;
     background-color: #d2d2d2;
     display: flex;
-    position: fixed;
     bottom: 0;
     padding: 20px 40px;
-    .new_message{
-      display: flex;
-    }
     .top {
       display: flex;
       width: 100%;
       height: 100%;
      
       .form__message {
-        height: 50px;
-        width: 945px;
+        height: 100%;
+        width: 100%;
         position: relative;
       }
       .form__mask {
-          height: 50px;
-          position: absolute;
-          left: 942px;
+          height: 40%;
           bottom: 5px;
         
-        .form__mask__image{
-          .icon {
-            font-size: 22px;
-          }
-          .hidden {
-            display: none;
-          }
+      .form__mask__image{
+        .icon {
+          font-size: 22px;
+          position: absolute;
+          right: 158px;
+          bottom: 34px;
         }
+        .hidden {
+          display: none;
+        }
+      }
       }
     
     }
